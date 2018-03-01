@@ -28,7 +28,7 @@ class Weather extends Component {
     var lat = locationinfo.lat;
     var lon = locationinfo.lon;
     var country = locationinfo.country;
-    fetch(('http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+API_KEY),  {
+    fetch(('https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+API_KEY),  {
           method: "get"
       })
       .then((res) => res.json())
