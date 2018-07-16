@@ -14,7 +14,7 @@ class CurrrentLocation extends Component {
   }
 
   componentWillMount(){
-    fetch('http://geoip.nekudo.com/api')
+    fetch('https://geoip.nekudo.com/api')
     .then((res) => res.json())
     .then((res) => {
       var location = {};
