@@ -14,13 +14,13 @@ class CurrrentLocation extends Component {
   }
 
   componentWillMount(){
-    fetch('https://freegeoip.net/json/')
+    fetch('http://geoip.nekudo.com/api')
     .then((res) => res.json())
     .then((res) => {
       var location = {};
-      location.lat = res.latitude;
-      location.lon = res.longitude;
-      location.country = res.country_name;
+      location.lat = res.location.latitude;
+      location.lon = res.location.longitude;
+      location.country = res.country.name;
       location.city = res.city;
       this.setState({location})
       this.props.location(this.state.location);

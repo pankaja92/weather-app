@@ -23,8 +23,7 @@ class Weather extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps){
-    var locationinfo = nextProps.locationinfo;
+  componentWillReceiveProps({locationinfo}){
     var lat = locationinfo.lat;
     var lon = locationinfo.lon;
     var country = locationinfo.country;
